@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>ShopSmart - Modern E-Commerce Store</title>
-        <meta name="description" content="Discover amazing products for your lifestyle at ShopSmart. Shop the latest trending items with exclusive deals and fast shipping." />
+        <title>Viva Brinquedos Educativos - Desenvolvimento Infantil</title>
+        <meta name="description" content="Descubra brinquedos educativos de qualidade na Viva Brinquedos. Produtos que estimulam a criatividade e aprendizado das crianças com entrega rápida." />
       </Helmet>
       
       <main>
