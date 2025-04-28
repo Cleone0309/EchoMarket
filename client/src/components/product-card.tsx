@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Heart, ShoppingCart } from "lucide-react";
+import { Heart, ShoppingCart, BarChart2 } from "lucide-react";
 import { Product } from "@shared/schema";
 import { useCart } from "@/hooks/use-cart";
+import { useCompare } from "@/hooks/use-compare";
 import { formatCurrency, getRatingText } from "@/lib/utils";
 
 type ProductCardProps = {
@@ -12,8 +13,12 @@ type ProductCardProps = {
 export default function ProductCard({ product }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const { addItem } = useCart();
+  const { addItem: addToCompare, isInCompare, removeItem: removeFromCompare } = useCompare();
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isAddingToWishlist, setIsAddingToWishlist] = useState(false);
+  const [isAddingToCompare, setIsAddingToCompare] = useState(false);
+  
+  const inCompareList = isInCompare(product.id);
 
   const handleAddToCart = async (e: React.MouseEvent) => {
     e.preventDefault();
@@ -34,6 +39,23 @@ export default function ProductCard({ product }: ProductCardProps) {
     // Wishlist functionality would be implemented here
     setIsAddingToWishlist(true);
     setTimeout(() => setIsAddingToWishlist(false), 1000);
+  };
+  
+  const handleToggleCompare = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    setIsAddingToCompare(true);
+    
+    setTimeout(() => {
+      setIsAddingToCompare(false);
+    }, 500);
+    
+    if (inCompareList) {
+      removeFromCompare(product.id);
+    } else {
+      addToCompare(product.id);
+    }
   };
 
   return (
@@ -58,13 +80,21 @@ export default function ProductCard({ product }: ProductCardProps) {
           )}
         </div>
         
-        <div className={`absolute top-2 right-2 ${isHovered ? 'opacity-100' : 'opacity-0'} transition-opacity`}>
+        <div className={`absolute top-2 right-2 ${isHovered ? 'opacity-100' : 'opacity-0'} transition-opacity flex flex-col gap-2`}>
           <button 
             className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors"
             onClick={handleAddToWishlist}
             disabled={isAddingToWishlist}
           >
             <Heart className={`h-4 w-4 ${isAddingToWishlist ? 'text-red-500 fill-red-500' : 'text-gray-600'}`} />
+          </button>
+          <button 
+            className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors"
+            onClick={handleToggleCompare}
+            disabled={isAddingToCompare}
+            title={inCompareList ? "Remover da comparação" : "Adicionar à comparação"}
+          >
+            <BarChart2 className={`h-4 w-4 ${inCompareList ? 'text-primary fill-primary/20' : 'text-gray-600'}`} />
           </button>
         </div>
         
