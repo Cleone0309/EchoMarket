@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "next-themes";
 import { AuthProvider } from "@/hooks/use-auth";
 import { CartProvider } from "@/hooks/use-cart";
+import { CompareProvider } from "@/hooks/use-compare";
 import { ProtectedRoute } from "./lib/protected-route";
 
 import Header from "@/components/layout/header";
