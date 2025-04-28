@@ -1,0 +1,137 @@
+Desenvolver um projeto de e-commerce moderno com as seguintes características:
+
+🛒 Funcionalidades do E-commerce
+Front-end:
+
+Construir com Next.js (ou alternativamente React.js se preferir mais simplicidade).
+
+Estilizar com Tailwind CSS para responsividade total.
+
+Páginas principais:
+
+Home (com banners, destaques e promoções).
+
+Listagem de Produtos (com filtros e busca).
+
+Página de Detalhes do Produto.
+
+Carrinho de Compras.
+
+Checkout simplificado.
+
+Login e Cadastro de usuários.
+
+Área do Cliente (Meus Pedidos).
+
+Back-end:
+
+Utilizar o Supabase para:
+
+Banco de dados (PostgreSQL).
+
+Storage de imagens de produtos.
+
+Autenticação de usuários (registro/login seguro).
+
+Funções serverless (Edge Functions) para lógica customizada.
+
+Integrações de Inteligência Artificial:
+
+Descrição automática de produtos:
+
+Upload de imagem do produto no painel administrativo.
+
+Chamada à API da OpenAI (usando modelo GPT-4-Vision ou GPT-4 Turbo).
+
+IA deve gerar:
+
+Título
+
+Descrição
+
+Sugestão de categorias
+
+Tags de SEO
+
+Recomendações Inteligentes:
+
+IA sugere produtos similares na página de produto e na área de carrinho.
+
+WhatsApp Chatbot Automatizado:
+
+Integrar com a API Oficial do WhatsApp (Cloud API) ou Twilio.
+
+O chatbot deve:
+
+Responder status de pedidos automaticamente.
+
+Indicar produtos com base em preferências do cliente.
+
+Recuperar carrinhos abandonados enviando ofertas.
+
+Direcionar para atendimento humano se necessário.
+
+🔗 Tecnologias específicas
+Frontend: Next.js 14, TailwindCSS
+
+Backend: Supabase (Auth, Database, Storage, Edge Functions)
+
+IA: OpenAI API (GPT-4 Turbo ou Vision)
+
+Mensageria: WhatsApp Cloud API (ou alternativa via webhook e Twilio/360Dialog)
+
+Gateway de Pagamento: Stripe (ou Mercado Pago, se preferir)
+
+🛠️ Requisitos técnicos
+Projeto estruturado em pastas organizadas (components, pages, lib, services).
+
+Uso de Prisma ORM (opcional, se quiser camadas de serviços adicionais com Supabase).
+
+Conexão segura com Supabase usando variáveis de ambiente (não hardcoded).
+
+APIs externas (OpenAI, WhatsApp) com segurança básica (auth tokens escondidos).
+
+Sistema de rotas privadas para proteger área de admin e área do cliente.
+
+Deploy (simulado) no próprio Replit ou exportável para Vercel em produção.
+
+✨ Extras desejados (Se possível)
+Sistema de Cupons no Checkout.
+
+Envio de e-mails automáticos pós-compra.
+
+Painel Administrativo responsivo para celular e desktop.
+
+Notificações Web Push de promoções (opcional).
+
+SEO otimizado em páginas principais.
+
+🔥 Resumo final
+Em resumo:
+Quero um e-commerce full-stack construído no Replit, usando Next.js + Supabase, integrado com IA para gerar descrições automáticas a partir de imagens de produtos, e chatbot no WhatsApp que interaja automaticamente com clientes, tudo organizado para fácil deploy futuro em Vercel.
+
+🚀 Instruções finais para a IA:
+Configure todos os arquivos de ambiente necessários (.env.local).
+
+Crie o esquema inicial no Supabase (tabelas: usuários, produtos, pedidos, categorias, cupons, avaliações, etc).
+
+Simule uma integração funcional de IA para geração de descrições.
+
+Simule integrações com WhatsApp usando webhooks básicos se não conseguir acessar a API oficial durante testes.
+
+✅ Quero que você me entregue:
+
+Código completo.
+
+Link para visualização online no próprio Replit.
+
+Instruções de como fazer deploy em produção (Vercel ou outro).
+
+📥 Fim do prompt.
+✅ Pronto! Esse prompt é muito bem detalhado para usar no Replit — seja para programar via IA ou até para entregar para um programador.
+
+Se você quiser, agora posso:
+
+Gerar também o PDF + Slide resumido do projeto que você pediu.
+
+Escrever o primeiro arquivo README.md já formatado para o repositório do Replit.
