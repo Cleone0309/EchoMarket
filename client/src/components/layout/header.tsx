@@ -92,7 +92,7 @@ export default function Header() {
                 <form onSubmit={handleSearch}>
                   <Input
                     type="text"
-                    placeholder="Search products..."
+                    placeholder="Buscar brinquedos..."
                     className="bg-gray-100 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white w-64"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
@@ -108,29 +108,29 @@ export default function Header() {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem disabled>
-                      <span className="font-medium">Hi, {user.username}</span>
+                      <span className="font-medium">Olá, {user.username}</span>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem asChild>
-                      <Link href="/profile">My Profile</Link>
+                      <Link href="/profile">Meu Perfil</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <Link href="/orders">My Orders</Link>
+                      <Link href="/orders">Meus Pedidos</Link>
                     </DropdownMenuItem>
                     {user.role === "admin" && (
                       <>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem asChild>
-                          <Link href="/admin/dashboard">Admin Dashboard</Link>
+                          <Link href="/admin/dashboard">Painel Administrativo</Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem asChild>
-                          <Link href="/admin/products">Manage Products</Link>
+                          <Link href="/admin/products">Gerenciar Produtos</Link>
                         </DropdownMenuItem>
                       </>
                     )}
                     <DropdownMenuSeparator />
                     <DropdownMenuItem onClick={() => logoutMutation.mutate()}>
-                      Logout
+                      Sair
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -172,7 +172,7 @@ export default function Header() {
             <form onSubmit={handleSearch} className="relative">
               <Input
                 type="text"
-                placeholder="Search products..."
+                placeholder="Buscar produtos..."
                 className="bg-gray-100 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white w-full"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -180,31 +180,31 @@ export default function Header() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 h-4 w-4" />
             </form>
             <Link href="/" className="block py-2 hover:text-primary transition-colors">
-              Home
+              Início
             </Link>
             <Link href="/products" className="block py-2 hover:text-primary transition-colors">
-              Products
+              Produtos
             </Link>
-            <Link href="/products?category=electronics" className="block py-2 hover:text-primary transition-colors pl-4">
-              - Electronics
+            <Link href="/products?category=montessori" className="block py-2 hover:text-primary transition-colors pl-4">
+              - Montessori
             </Link>
-            <Link href="/products?category=fashion" className="block py-2 hover:text-primary transition-colors pl-4">
-              - Fashion
+            <Link href="/products?category=jogos-educativos" className="block py-2 hover:text-primary transition-colors pl-4">
+              - Jogos Educativos
             </Link>
-            <Link href="/products?category=home" className="block py-2 hover:text-primary transition-colors pl-4">
-              - Home
+            <Link href="/products?category=brinquedos-sensoriais" className="block py-2 hover:text-primary transition-colors pl-4">
+              - Brinquedos Sensoriais
             </Link>
-            <Link href="/products?category=sports" className="block py-2 hover:text-primary transition-colors pl-4">
-              - Sports
+            <Link href="/products?category=musical" className="block py-2 hover:text-primary transition-colors pl-4">
+              - Instrumentos Musicais
             </Link>
-            <Link href="/products?category=gaming" className="block py-2 hover:text-primary transition-colors pl-4">
-              - Gaming
+            <Link href="/products?category=livros" className="block py-2 hover:text-primary transition-colors pl-4">
+              - Livros Interativos
             </Link>
             <Link href="/products?sale=true" className="block py-2 hover:text-primary transition-colors">
-              Deals
+              Promoções
             </Link>
             <Link href="#" className="block py-2 hover:text-primary transition-colors">
-              Contact
+              Contato
             </Link>
           </div>
         )}
