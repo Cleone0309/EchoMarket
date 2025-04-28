@@ -4,6 +4,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { useCart } from "@/hooks/use-cart";
 import CartSidebar from "@/components/cart-sidebar";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -37,7 +38,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white shadow-sm sticky top-0 z-40">
+      <header className="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-40 dark:text-gray-100 dark:border-b dark:border-gray-800">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
@@ -93,13 +94,15 @@ export default function Header() {
                   <Input
                     type="text"
                     placeholder="Buscar brinquedos..."
-                    className="bg-gray-100 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white w-64"
+                    className="bg-gray-100 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white w-64 dark:bg-gray-800 dark:text-gray-100"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 h-4 w-4" />
                 </form>
               </div>
+              
+              <ThemeToggle />
               
               {user ? (
                 <DropdownMenu>
@@ -168,17 +171,21 @@ export default function Header() {
         
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden px-4 pt-2 pb-4 space-y-3 bg-white border-t">
+          <div className="md:hidden px-4 pt-2 pb-4 space-y-3 bg-white dark:bg-gray-900 border-t dark:border-gray-800">
             <form onSubmit={handleSearch} className="relative">
               <Input
                 type="text"
                 placeholder="Buscar produtos..."
-                className="bg-gray-100 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white w-full"
+                className="bg-gray-100 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white w-full dark:bg-gray-800 dark:text-gray-100"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 h-4 w-4" />
             </form>
+            <div className="flex justify-between items-center py-2">
+              <span className="text-sm text-gray-500 dark:text-gray-400">Modo escuro</span>
+              <ThemeToggle />
+            </div>
             <Link href="/" className="block py-2 hover:text-primary transition-colors">
               Início
             </Link>

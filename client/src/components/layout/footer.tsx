@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaPinterestP } from "react-icons/f
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2A8C57] text-white pt-12 pb-6">
+    <footer className="bg-[#2A8C57] dark:bg-gray-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
@@ -116,7 +116,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-[#4FB87A]/30 pt-6">
+        <div className="border-t border-[#4FB87A]/30 dark:border-gray-700 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-[#A2D9C1] text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} Viva Brinquedos Educativos. Todos os direitos reservados.
