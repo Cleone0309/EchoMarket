@@ -44,45 +44,45 @@ export default function Header() {
             <div className="flex items-center space-x-2">
               <Link href="/" className="flex items-center">
                 <ShoppingBag className="text-primary text-2xl mr-2" />
-                <span className="text-xl font-bold">ShopSmart</span>
+                <span className="text-xl font-bold text-primary">Viva Brinquedos</span>
               </Link>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
               <Link href="/" className="font-medium hover:text-primary transition-colors">
-                Home
+                Início
               </Link>
               <Link href="/products" className="font-medium hover:text-primary transition-colors">
-                Products
+                Produtos
               </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger className="font-medium hover:text-primary transition-colors flex items-center">
-                  Categories <ChevronDown size={16} className="ml-1" />
+                  Categorias <ChevronDown size={16} className="ml-1" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="center">
                   <DropdownMenuItem asChild>
-                    <Link href="/products?category=electronics">Electronics</Link>
+                    <Link href="/products?category=montessori">Montessori</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/products?category=fashion">Fashion</Link>
+                    <Link href="/products?category=jogos-educativos">Jogos Educativos</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/products?category=home">Home</Link>
+                    <Link href="/products?category=brinquedos-sensoriais">Brinquedos Sensoriais</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/products?category=sports">Sports</Link>
+                    <Link href="/products?category=musical">Instrumentos Musicais</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="/products?category=gaming">Gaming</Link>
+                    <Link href="/products?category=livros">Livros Interativos</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               <Link href="/products?sale=true" className="font-medium hover:text-primary transition-colors">
-                Deals
+                Promoções
               </Link>
               <Link href="#" className="font-medium hover:text-primary transition-colors">
-                Contact
+                Contato
               </Link>
             </nav>
 
