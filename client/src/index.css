@@ -13,15 +13,15 @@
 --card-foreground: 150 10% 15%;
 --border: 150 32% 91%;
 --input: 150 32% 91%;
---primary: 143 65% 40%;
+--primary: 143 65% 46%;
 --primary-foreground: 0 0% 100%;
 --secondary: 130 55% 82%;
 --secondary-foreground: 143 55% 20%;
---accent: 168 77% 40%;
+--accent: 168 77% 47%;
 --accent-foreground: 0 0% 100%;
 --destructive: 0 84.2% 60.2%;
 --destructive-foreground: 60 9.1% 97.8%;
---ring: 143 65% 40%;
+--ring: 143 65% 46%;
 --radius: 0.75rem;
   }
   .dark {
@@ -35,15 +35,15 @@
 --card-foreground: 120 10% 98%;
 --border: 150 20% 20%;
 --input: 150 20% 20%;
---primary: 143 55% 42%;
+--primary: 143 60% 52%;
 --primary-foreground: 0 0% 100%;
---secondary: 130 45% 50%;
+--secondary: 130 50% 60%;
 --secondary-foreground: 143 55% 12%;
---accent: 168 55% 40%;
+--accent: 168 60% 52%;
 --accent-foreground: 0 0% 100%;
 --destructive: 0 62.8% 30.6%;
 --destructive-foreground: 0 0% 98%;
---ring: 143 55% 42%;
+--ring: 143 60% 52%;
 --radius: 0.75rem;
   }
 

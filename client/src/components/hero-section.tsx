@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#1A5A3A] text-white">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1A5A3A]/95 to-[#2A8C57]/70"></div>
+    <section className="relative bg-[#2A8C57] text-white">
+      <div className="absolute inset-0 bg-gradient-to-r from-[#2A8C57]/95 to-[#4FB87A]/70"></div>
       <div className="relative container mx-auto px-4 py-24">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
